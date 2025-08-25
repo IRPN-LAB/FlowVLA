@@ -157,25 +157,38 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">World Model Rollouts: Seeing is Believing</h2>
           <div class="content has-text-justified">
-              <p>
-                  By reasoning about motion first, FlowVLA generates significantly sharper, more physically coherent, and longer-horizon video predictions compared to standard next-frame prediction models.
-              </p>
+            <p>
+              Our analysis on the challenging Bridge V2 dataset reveals two critical failure modes in the baseline model: physical incoherence and semantic inconsistency. FlowVLA successfully addresses both.
+            </p>
           </div>
         </div>
       </div>
-      <!-- LIBERO (Simulation) 的部分已被完全删除 -->
 
-      <h3 class="title is-4 has-text-centered">Bridge V2 (Real-World)</h3>
-      <!-- 只保留 Bridge V2 的图片 -->
+      <!-- 第一张图片: 展示物理不一致 -->
+      <h3 class="title is-4 has-text-centered">Failure Mode 1: Physical Incoherence</h3>
       <div class="columns is-centered">
         <div class="column is-four-fifths">
-            <img src="images/bridge_rollout.png" alt="Bridge V2 rollout comparison"/>
+          <img src="images/graph_phy.png" alt="Example of physical incoherence in baseline model"/>
         </div>
       </div>
-      <!-- 更新了下方的说明文字，使其与图片内容保持一致 -->
-      <h2 class="subtitle has-text-centered">
-        On the real-world Bridge V2 task, the standard approach (UniVLA, middle row) produces blurry predictions. FlowVLA (bottom row) maintains sharp, physically plausible rollouts.
-      </h2>
+      <p class="content has-text-centered">
+        The baseline model (UniVLA, middle) fails to maintain physical plausibility, causing the robotic arm to vanish or the object to move erratically. FlowVLA (bottom) remains stable and coherent.
+      </p>
+
+      <br> <!-- 增加间距 -->
+
+      <!-- 第二张图片: 展示语义不一致 -->
+      <h3 class="title is-4 has-text-centered">Failure Mode 2: Semantic Inconsistency</h3>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <!-- 重要：请替换成您的图片文件名 -->
+          <img src="images/graph_sem.png" alt="Example of semantic inconsistency in baseline model"/>
+        </div>
+      </div>
+      <p class="content has-text-centered">
+        Here, the baseline's prediction appears visually plausible but fails to follow the language command. FlowVLA correctly interprets the instruction and generates the corresponding action.
+      </p>
+
     </div>
 </section>
 <!-- End World Model Rollouts -->

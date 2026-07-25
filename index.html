@@ -135,43 +135,59 @@
 <section class="section insight-section" id="insight">
   <div class="container is-max-desktop">
     <div class="has-text-centered">
-      <p class="insight-eyebrow">CORE INSIGHT</p>
-      <h2 class="title is-3">Core Insight: From Perception to Causal Reasoning to Prediction</h2>
-      <p class="insight-lead">
-        Embodied world models should go beyond direct observation-to-future mappings.
-        They should establish an explicit causal reasoning chain from perception,
-        through reasoning about scene dynamics, to future prediction.
+      <p class="insight-eyebrow">CORE INSIGHTS</p>
+      <h2 class="title is-3">Core Insights for Embodied World Models</h2>
+      <p class="insight-overview">
+        Embodied world models require both a structured causal reasoning process
+        and the ability to respond to interventions.
       </p>
     </div>
 
-    <div class="insight-flow" aria-label="Perception to reasoning to prediction">
-      <div class="insight-stage">
-        <span class="insight-stage-index">01</span>
-        <strong>Perception</strong>
-        <span>Encode the current visual state</span>
-      </div>
-      <span class="insight-arrow" aria-hidden="true">→</span>
-      <div class="insight-stage">
-        <span class="insight-stage-index">02</span>
-        <strong>Causal Reasoning</strong>
-        <span>Infer the motion that drives state transitions</span>
-      </div>
-      <span class="insight-arrow" aria-hidden="true">→</span>
-      <div class="insight-stage">
-        <span class="insight-stage-index">03</span>
-        <strong>Prediction</strong>
-        <span>Autoregressively predict the future visual state</span>
-      </div>
-    </div>
+    <div class="core-insight-grid">
+      <article class="core-insight-card">
+        <span class="core-insight-index">01 · STRUCTURE</span>
+        <h3 class="title is-4">From Perception to Causal Reasoning to Prediction</h3>
+        <p>
+          Embodied world models should go beyond direct observation-to-future mappings.
+          They should explicitly reason about scene dynamics before predicting future states.
+        </p>
+        <div class="insight-mini-flow" aria-label="Perception to causal reasoning to prediction">
+          <span>Perception</span>
+          <b aria-hidden="true">→</b>
+          <span>Causal Reasoning</span>
+          <b aria-hidden="true">→</b>
+          <span>Prediction</span>
+        </div>
+        <p class="insight-card-connection">
+          <strong>FlowVLA</strong> instantiates this process within a unified autoregressive model:
+          <span class="insight-equation">
+            v<sub>t</sub> → f<sub>t</sub> → v<sub>t+1</sub>
+          </span>
+        </p>
+      </article>
 
-    <p class="insight-connection has-text-centered">
-      <strong>FlowVLA</strong> instantiates this principle within a unified autoregressive
-      model. It generates motion as an explicit intermediate representation before
-      predicting the future frame, forming a causal reasoning chain:
-      <span class="insight-equation">
-        v<sub>t</sub> → f<sub>t</sub> → v<sub>t+1</sub>
-      </span>
-    </p>
+      <article class="core-insight-card">
+        <span class="core-insight-index">02 · CAPABILITY</span>
+        <h3 class="title is-4">Counterfactual Reasoning under Interventions</h3>
+        <p>
+          A causal world model should not only predict what is likely to happen,
+          but also anticipate how the future would change under alternative dynamics
+          or interventions.
+        </p>
+        <div class="insight-mini-flow insight-intervention" aria-label="Counterfactual intervention">
+          <span>Fixed Observation</span>
+          <b aria-hidden="true">+</b>
+          <span>Intervened Motion</span>
+          <b aria-hidden="true">→</b>
+          <span>Counterfactual Future</span>
+        </div>
+        <p class="insight-card-connection">
+          By intervening on the intermediate motion representation while keeping the
+          visual observation fixed, we test whether FlowVLA's future prediction
+          responds to counterfactual dynamics.
+        </p>
+      </article>
+    </div>
   </div>
 </section>
 <!-- End Core Insight -->

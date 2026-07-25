@@ -197,6 +197,48 @@
 </section>
 <!-- End World Model Rollouts -->
 
+<!-- Counterfactual Flow Intervention -->
+<section class="section" id="counterfactual-intervention">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Counterfactual Flow Intervention</h2>
+        <div class="content has-text-justified">
+          <p>
+            To test whether the generated future depends on the intermediate motion representation,
+            we intervene on the optical flow while keeping the visual observation fixed.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <h3 class="title is-5 has-text-centered">Drawer Opening</h3>
+        <img src="images/counterfactual_drawer.svg"
+             alt="Counterfactual optical-flow intervention for drawer opening">
+      </div>
+      <div class="column">
+        <h3 class="title is-5 has-text-centered">Object Picking</h3>
+        <img src="images/counterfactual_picking.svg"
+             alt="Counterfactual optical-flow intervention for object picking">
+      </div>
+      <div class="column">
+        <h3 class="title is-5 has-text-centered">Cloth Folding</h3>
+        <img src="images/counterfactual_cloth.svg"
+             alt="Counterfactual optical-flow intervention for cloth folding">
+      </div>
+    </div>
+
+    <p class="content has-text-centered">
+      We invert the ground-truth optical flow while keeping the visual observation fixed.
+      The predicted future follows the inverted motion, supporting that FlowVLA uses
+      intermediate flow as a causal reasoning bridge.
+    </p>
+  </div>
+</section>
+<!-- End Counterfactual Flow Intervention -->
+
 
 
 <!-- Benchmark Performance -->

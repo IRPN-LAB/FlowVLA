@@ -17,4 +17,4 @@ State the paper's high-level view of embodied world models before presenting the
 
 ## Presentation
 
-Use the existing Bulma typography and two restrained cards. Show the cards side by side on desktop and stacked on mobile without adding dependencies.
+Use an editorial two-row layout without card borders or shadows. Each row pairs a numbered insight heading with a short claim and sequence. Place the shared FlowVLA implementation in one highlighted summary band below the rows. Stack each row on mobile without adding dependencies.

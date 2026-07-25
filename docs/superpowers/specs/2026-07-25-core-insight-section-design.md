@@ -7,7 +7,7 @@ State the paper's high-level view of embodied world models before presenting the
 ## Placement and Content
 
 - Place the section after the sticky navigation and before the teaser.
-- Title it `Core Insight: An Autoregressive Causal Chain from Perception to Prediction`.
+- Title it `Core Insight: From Perception to Causal Reasoning to Prediction`.
 - State that embodied world models should move beyond direct observation-to-future mappings and instead establish an explicit causal reasoning chain from perception to future prediction.
 - Visualize the process as `Perception → Causal Reasoning → Prediction`.
 - Explain that FlowVLA instantiates this principle within a unified autoregressive model by generating motion as an explicit intermediate representation before the future frame.

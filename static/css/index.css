@@ -137,6 +137,16 @@ section[id] {
   line-height: 1.65;
 }
 
+.insight-equation {
+  display: block;
+  margin-top: 0.75rem;
+  color: #2d5675;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
 @media screen and (max-width: 768px) {
   .insight-section {
     padding-top: 2.5rem;
@@ -295,4 +305,3 @@ section[id] {
 .eql-cntrb { 
   font-size: smaller;
 }
-

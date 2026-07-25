@@ -136,11 +136,11 @@
   <div class="container is-max-desktop">
     <div class="has-text-centered">
       <p class="insight-eyebrow">CORE INSIGHT</p>
-      <h2 class="title is-3">Core Insight: From Perception to Reasoning to Prediction</h2>
+      <h2 class="title is-3">Core Insight: An Autoregressive Causal Chain from Perception to Prediction</h2>
       <p class="insight-lead">
         Embodied world models should go beyond direct observation-to-future mappings.
-        They should establish a structured process from perception, through reasoning
-        about scene dynamics, to prediction of future states.
+        They should establish an explicit causal reasoning chain from perception,
+        through reasoning about scene dynamics, to future prediction.
       </p>
     </div>
 
@@ -148,25 +148,29 @@
       <div class="insight-stage">
         <span class="insight-stage-index">01</span>
         <strong>Perception</strong>
-        <span>Observe the current visual state</span>
+        <span>Encode the current visual state</span>
       </div>
       <span class="insight-arrow" aria-hidden="true">→</span>
       <div class="insight-stage">
         <span class="insight-stage-index">02</span>
-        <strong>Reasoning</strong>
-        <span>Infer how scene dynamics evolve</span>
+        <strong>Causal Reasoning</strong>
+        <span>Infer the motion that drives state transitions</span>
       </div>
       <span class="insight-arrow" aria-hidden="true">→</span>
       <div class="insight-stage">
         <span class="insight-stage-index">03</span>
         <strong>Prediction</strong>
-        <span>Anticipate the future visual state</span>
+        <span>Autoregressively predict the future visual state</span>
       </div>
     </div>
 
     <p class="insight-connection has-text-centered">
-      <strong>FlowVLA</strong> instantiates this principle by treating motion as an
-      explicit intermediate representation for visual reasoning.
+      <strong>FlowVLA</strong> instantiates this principle within a unified autoregressive
+      model. It generates motion as an explicit intermediate representation before
+      predicting the future frame, forming a causal reasoning chain:
+      <span class="insight-equation">
+        v<sub>t</sub> → f<sub>t</sub> → v<sub>t+1</sub>
+      </span>
     </p>
   </div>
 </section>

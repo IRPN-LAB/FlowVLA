@@ -138,56 +138,71 @@
       <p class="insight-eyebrow">CORE INSIGHTS</p>
       <h2 class="title is-3">Core Insights for Embodied World Models</h2>
       <p class="insight-overview">
-        Embodied world models require both a structured causal reasoning process
-        and the ability to respond to interventions.
+        Two principles guide how embodied world models should understand and predict the future.
       </p>
     </div>
 
-    <div class="core-insight-grid">
-      <article class="core-insight-card">
-        <span class="core-insight-index">01 · STRUCTURE</span>
-        <h3 class="title is-4">From Perception to Causal Reasoning to Prediction</h3>
-        <p>
-          Embodied world models should go beyond direct observation-to-future mappings.
-          They should explicitly reason about scene dynamics before predicting future states.
-        </p>
-        <div class="insight-mini-flow" aria-label="Perception to causal reasoning to prediction">
-          <span>Perception</span>
-          <b aria-hidden="true">→</b>
-          <span>Causal Reasoning</span>
-          <b aria-hidden="true">→</b>
-          <span>Prediction</span>
+    <div class="insight-statements">
+      <article class="insight-statement">
+        <div class="insight-statement-heading">
+          <span class="insight-number">01</span>
+          <div>
+            <p class="insight-label">CAUSAL STRUCTURE</p>
+            <h3 class="title is-4">From Perception to Causal Reasoning to Prediction</h3>
+          </div>
         </div>
-        <p class="insight-card-connection">
-          <strong>FlowVLA</strong> instantiates this process within a unified autoregressive model:
-          <span class="insight-equation">
-            v<sub>t</sub> → f<sub>t</sub> → v<sub>t+1</sub>
-          </span>
-        </p>
+        <div class="insight-statement-body">
+          <p>
+            Embodied world models should explicitly reason about scene dynamics
+            between perception and future prediction.
+          </p>
+          <div class="insight-sequence" aria-label="Perception to causal reasoning to prediction">
+            <strong>Perception</strong>
+            <span aria-hidden="true">→</span>
+            <strong>Causal Reasoning</strong>
+            <span aria-hidden="true">→</span>
+            <strong>Prediction</strong>
+          </div>
+        </div>
       </article>
 
-      <article class="core-insight-card">
-        <span class="core-insight-index">02 · CAPABILITY</span>
-        <h3 class="title is-4">Counterfactual Reasoning under Interventions</h3>
-        <p>
-          A causal world model should not only predict what is likely to happen,
-          but also anticipate how the future would change under alternative dynamics
-          or interventions.
-        </p>
-        <div class="insight-mini-flow insight-intervention" aria-label="Counterfactual intervention">
-          <span>Fixed Observation</span>
-          <b aria-hidden="true">+</b>
-          <span>Intervened Motion</span>
-          <b aria-hidden="true">→</b>
-          <span>Counterfactual Future</span>
+      <article class="insight-statement">
+        <div class="insight-statement-heading">
+          <span class="insight-number">02</span>
+          <div>
+            <p class="insight-label">COUNTERFACTUAL CAPABILITY</p>
+            <h3 class="title is-4">Counterfactual Reasoning under Interventions</h3>
+          </div>
         </div>
-        <p class="insight-card-connection">
-          By intervening on the intermediate motion representation while keeping the
-          visual observation fixed, we test whether FlowVLA's future prediction
-          responds to counterfactual dynamics.
-        </p>
+        <div class="insight-statement-body">
+          <p>
+            They should also predict how futures change under alternative dynamics
+            or interventions.
+          </p>
+          <div class="insight-sequence" aria-label="Counterfactual intervention">
+            <strong>Observation</strong>
+            <span aria-hidden="true">+</span>
+            <strong>Intervention</strong>
+            <span aria-hidden="true">→</span>
+            <strong>Counterfactual Future</strong>
+          </div>
+        </div>
       </article>
     </div>
+
+    <aside class="flowvla-insight-summary">
+      <span class="flowvla-summary-label">FLOWVLA</span>
+      <div>
+        <p>
+          FlowVLA realizes these principles through a unified autoregressive motion bridge.
+          Intervening on the intermediate motion tests how its prediction responds to
+          counterfactual dynamics.
+        </p>
+        <span class="insight-equation">
+          v<sub>t</sub> → f<sub>t</sub> → v<sub>t+1</sub>
+        </span>
+      </div>
+    </aside>
   </div>
 </section>
 <!-- End Core Insight -->
